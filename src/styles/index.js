@@ -8,6 +8,8 @@ export const screenWidth = width;
 
 export const colors = {
   main: '#be003c',
+  backgroundColor: 'rgb(254, 249, 232)',
+  white: '#FFFFFF',
 
   error: {
     default: '#C03A39',

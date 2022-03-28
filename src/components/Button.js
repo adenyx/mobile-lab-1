@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, ActivityIndicator } from 'react-native';
 
 import RNStyles from '@tapston/react-native-styles';
 
@@ -11,23 +11,29 @@ const Button = ({
   value = 'Button',
   disabled = false,
   containerStyle = {},
-  textWeight = 'regular',
-  textSize = '16',
-  type = 'light',
+  textColor = colors.white,
+  textWeight = '400',
+  textSize = 16,
   size = 'large',
   loading = false,
 }) => {
-  const styles = getStyles(size);
+  const styles = getStyles(size, textSize, textColor, textWeight);
   return (
     <TouchableOpacity
+      activeOpacity={0.6}
+      onPress={onPress}
       disabled={disabled}
       style={[styles.container, containerStyle]}>
-      <Text>{value}</Text>
+      {loading ? (
+        <ActivityIndicator color={textColor} />
+      ) : (
+        <Text style={styles.value}>{value}</Text>
+      )}
     </TouchableOpacity>
   );
 };
 
-const getStyles = size =>
+const getStyles = (size, textSize, textColor, textWeight) =>
   RNStyles.create({
     container: {
       width: '100%',
@@ -36,6 +42,12 @@ const getStyles = size =>
       justifyContent: 'center',
       borderRadius: 8,
       backgroundColor: colors.main,
+    },
+
+    value: {
+      fontSize: textSize,
+      fontWeight: textWeight,
+      color: textColor,
     },
   });
 
