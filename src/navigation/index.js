@@ -20,12 +20,20 @@ const DrawerStack = () => {
       <Drawer.Screen
         name="Main"
         options={{
-          //   headerShown: false,
           headerTitle: 'Feed The Cat',
           headerTitleStyle: { color: colors.white },
           headerStyle: { backgroundColor: colors.main },
         }}
         component={screens.Main}
+      />
+      <Drawer.Screen
+        name="About"
+        options={{
+          headerTitle: 'About',
+          headerTitleStyle: { color: colors.white },
+          headerStyle: { backgroundColor: colors.main },
+        }}
+        component={screens.About}
       />
     </Drawer.Navigator>
   );

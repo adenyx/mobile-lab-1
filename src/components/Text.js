@@ -5,17 +5,6 @@ import RNStyles from '@tapston/react-native-styles';
 
 // import { colors } from '../styles';
 
-/**
- * @component Text
- * @prop {Number} size - text size
- * @prop {String} weight - text weight
- * @prop {String} color - text color
- * @prop {Function} onPress - text on press callback
- * @prop {Object} style - additional text styles
- * @prop {Number} numberOfLines
- * @prop {Boolean} isSelectable - if true we can select the text for coping
- */
-//   color = colors.grayscale[10],
 const _Text = ({
   children,
   size = 14,
