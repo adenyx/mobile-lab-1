@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import RNStyles from '@tapston/react-native-styles';
+import { colors } from '../../styles';
 
 const AboutView = props => {
   return (
@@ -18,8 +19,7 @@ const styles = RNStyles.create({
   container: {
     flex: 1,
     padding: 16,
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    backgroundColor: colors.backgroundColor,
   },
 
   title: {
