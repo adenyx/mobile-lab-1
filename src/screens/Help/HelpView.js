@@ -1,13 +1,15 @@
-import React from 'react';
-import { ScrollView, View, Text, Image } from 'react-native';
+import React, { useRef } from 'react';
+import { ScrollView, View, Text, Image, TouchableOpacity } from 'react-native';
 
 import RNStyles from '@tapston/react-native-styles';
 import { colors, screenWidth } from '../../styles';
 
 const HelpView = props => {
+  const ref = useRef();
   return (
     <View style={styles.container}>
       <ScrollView
+        ref={ref}
         pagingEnabled={true}
         showsHorizontalScrollIndicator={false}
         horizontal={true}
@@ -62,13 +64,16 @@ const HelpView = props => {
         </View>
       </ScrollView>
       <View style={styles.dotContainer}>
-        <View
+        <TouchableOpacity
+          onPress={() => props.scrollToOffset(1, ref)}
           style={[styles.dot, props.activePage === 1 && styles.activeDot]}
         />
-        <View
+        <TouchableOpacity
+          onPress={() => props.scrollToOffset(2, ref)}
           style={[styles.dot, props.activePage === 2 && styles.activeDot]}
         />
-        <View
+        <TouchableOpacity
+          onPress={() => props.scrollToOffset(3, ref)}
           style={[styles.dot, props.activePage === 3 && styles.activeDot]}
         />
       </View>

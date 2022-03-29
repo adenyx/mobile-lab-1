@@ -1,5 +1,4 @@
 import React from 'react';
-import { TouchableOpacity, Image, Share } from 'react-native';
 
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';

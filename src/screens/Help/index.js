@@ -1,5 +1,6 @@
+import React, { useState } from 'react';
+
 import { animateLayout } from '@tapston/react-native-animation';
-import React, { useState, useEffect } from 'react';
 
 import HelpView from './HelpView';
 
@@ -7,7 +8,6 @@ const HelpContainer = props => {
   const [activePage, setActivePage] = useState(1);
   const onScroll = event => {
     animateLayout();
-    console.log(event);
     if (event.contentOffset.x === 0) {
       setActivePage(1);
     }
@@ -18,6 +18,19 @@ const HelpContainer = props => {
       setActivePage(3);
     }
   };
+  const scrollToOffset = (item, ref) => {
+    if (item === 1) {
+      ref.current?.scrollTo({ x: 0, y: 0, animated: true });
+      return;
+    }
+    if (item === 2) {
+      ref.current?.scrollTo({ x: 390, y: 0, animated: true });
+      return;
+    }
+    ref.current?.scrollTo({ x: 780, y: 0, animated: true });
+    return;
+  };
+
   return (
     <HelpView
       /**
@@ -28,6 +41,7 @@ const HelpContainer = props => {
        * Methods
        */
       onScroll={onScroll}
+      scrollToOffset={scrollToOffset}
     />
   );
 };
