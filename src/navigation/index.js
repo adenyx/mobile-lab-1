@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
@@ -34,6 +33,15 @@ const DrawerStack = () => {
           headerStyle: { backgroundColor: colors.main },
         }}
         component={screens.About}
+      />
+      <Drawer.Screen
+        name="Settings"
+        options={{
+          headerTitle: 'Settings',
+          headerTitleStyle: { color: colors.white },
+          headerStyle: { backgroundColor: colors.main },
+        }}
+        component={screens.Settings}
       />
     </Drawer.Navigator>
   );

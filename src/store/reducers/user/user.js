@@ -47,7 +47,7 @@ export const updateCurrentUser = payload => ({
 });
 
 export const clearCurrentUser = () => ({
-  type: UPDATE_CURRENT_USER,
+  type: CLEAR_CURRENT_USER,
 });
 
 export default reducer;

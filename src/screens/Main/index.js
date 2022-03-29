@@ -10,7 +10,7 @@ const MainContainer = props => {
   const userData = useSelector(store => store.user.currentUser);
 
   const [counter, setCounter] = useState(0);
-  const [satiety, setSatiety] = useState(0);
+  const [satiety, setSatiety] = useState(userData.score || 0);
 
   const [buttonOpacity] = useState(new Animated.Value(0));
 
