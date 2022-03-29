@@ -1,10 +1,12 @@
 import React from 'react';
+import { TouchableOpacity, Image, Share } from 'react-native';
 
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import screens from '../screens';
 import { colors } from '../styles';
+import { ShareButton } from '../components';
 
 // ================================================================================ //
 
@@ -22,17 +24,18 @@ const DrawerStack = () => {
           headerTitle: 'Feed The Cat',
           headerTitleStyle: { color: colors.white },
           headerStyle: { backgroundColor: colors.main },
+          headerRight: () => <ShareButton />,
         }}
         component={screens.Main}
       />
       <Drawer.Screen
-        name="About"
+        name="Rating"
         options={{
-          headerTitle: 'About',
+          headerTitle: 'Rating',
           headerTitleStyle: { color: colors.white },
           headerStyle: { backgroundColor: colors.main },
         }}
-        component={screens.About}
+        component={screens.Rating}
       />
       <Drawer.Screen
         name="Settings"
@@ -42,6 +45,15 @@ const DrawerStack = () => {
           headerStyle: { backgroundColor: colors.main },
         }}
         component={screens.Settings}
+      />
+      <Drawer.Screen
+        name="About"
+        options={{
+          headerTitle: 'About',
+          headerTitleStyle: { color: colors.white },
+          headerStyle: { backgroundColor: colors.main },
+        }}
+        component={screens.About}
       />
     </Drawer.Navigator>
   );

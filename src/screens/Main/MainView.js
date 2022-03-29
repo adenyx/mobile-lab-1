@@ -78,6 +78,7 @@ const styles = RNStyles.create({
 
   bottomContainer: {
     padding: 16,
+    paddingBottom: 32,
   },
 });
 
