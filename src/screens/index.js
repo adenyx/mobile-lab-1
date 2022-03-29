@@ -4,6 +4,7 @@ import Authorization from './Authorization';
 import Splash from './Splash';
 import Settings from './Settings';
 import Rating from './Rating';
+import Help from './Help';
 
 export default {
   Main,
@@ -12,4 +13,5 @@ export default {
   Splash,
   Settings,
   Rating,
+  Help,
 };

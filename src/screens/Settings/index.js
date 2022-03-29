@@ -8,7 +8,7 @@ const SettingsContainer = props => {
   const dispatch = useDispatch();
   const handleLogOut = () => {
     dispatch(UserActions.clearUserData());
-    props.navigation.navigate('Auth');
+    props.navigation.replace('Auth');
   };
   return (
     <SettingsView

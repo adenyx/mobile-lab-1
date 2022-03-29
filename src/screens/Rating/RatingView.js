@@ -17,9 +17,15 @@ const RatingView = props => {
         )}
         renderItem={({ item, index }) => (
           <View style={styles.userRow}>
-            <Text style={styles.dataBlock}>{item.nickname}</Text>
-            <Text style={styles.dataBlock}>{item.score}</Text>
-            <Text style={styles.dataBlock}>{item.email}</Text>
+            <Text numberOfLines={1} style={styles.dataBlock}>
+              {item.nickname}
+            </Text>
+            <Text numberOfLines={1} style={styles.dataBlock}>
+              {item.score}
+            </Text>
+            <Text numberOfLines={1} style={styles.dataBlock}>
+              {item.email}
+            </Text>
           </View>
         )}
       />
@@ -38,6 +44,7 @@ const styles = RNStyles.create({
     padding: 4,
     borderWidth: 1,
     borderColor: '#01010180',
+    overflow: 'hidden',
   },
   title: {
     fontSize: 16,

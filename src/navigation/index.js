@@ -47,6 +47,15 @@ const DrawerStack = () => {
         component={screens.Settings}
       />
       <Drawer.Screen
+        name="Help"
+        options={{
+          headerTitle: 'Help',
+          headerTitleStyle: { color: colors.white },
+          headerStyle: { backgroundColor: colors.main },
+        }}
+        component={screens.Help}
+      />
+      <Drawer.Screen
         name="About"
         options={{
           headerTitle: 'About',
