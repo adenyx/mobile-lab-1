@@ -1,9 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Animated } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
+import UserActions from '../../store/reducers/user/actions';
 
 import MainView from './MainView';
 
 const MainContainer = props => {
+  const dispatch = useDispatch();
+  const userData = useSelector(store => store.user.currentUser);
+
   const [counter, setCounter] = useState(0);
   const [satiety, setSatiety] = useState(0);
 
@@ -25,6 +30,7 @@ const MainContainer = props => {
       setCounter(old => old + 1);
       return;
     }
+    dispatch(UserActions.updateUserData({ score: satiety + 1 }));
     setSatiety(old => old + 1);
     setCounter(0);
   };

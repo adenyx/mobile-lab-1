@@ -1392,6 +1392,11 @@
     deepmerge "^4.2.2"
     svgo "^2.5.0"
 
+"@tapston/react-native-animation@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@tapston/react-native-animation/-/react-native-animation-1.0.1.tgz#a928de2ff3b2d2588ab078dc3b51fbf96fccd6ba"
+  integrity sha512-EVIlHDIQD53c5/YkxwmDXu/Qp4igJXXshsMLJfGUsLoPXeqzIy52EMXeLFcpVgp60p4KjH4FdZREsIMoZOM+ew==
+
 "@tapston/react-native-styles@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@tapston/react-native-styles/-/react-native-styles-1.1.1.tgz#73dd5a7fa5a107f14f6239f910b9370d9740eaa1"

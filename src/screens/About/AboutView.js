@@ -17,13 +17,16 @@ const AboutView = props => {
 const styles = RNStyles.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding: 16,
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
 
   title: {
     fontSize: 26,
     fontWeight: 'bold',
+    textAlign: 'center',
+    paddingBottom: 16,
   },
   text: {
     fontSize: 16,

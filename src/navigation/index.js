@@ -44,14 +44,21 @@ const DrawerStack = () => {
 const RootStackNav = createStackNavigator();
 const RootStack = () => {
   return (
-    <RootStackNav.Navigator initialRouteName="Drawer">
-      {/* <RootStackNav.Screen
-        name="Main"
+    <RootStackNav.Navigator initialRouteName="Splash">
+      <RootStackNav.Screen
+        name="Splash"
         options={{
           headerShown: false,
         }}
-        component={screens.Main}
-      /> */}
+        component={screens.Splash}
+      />
+      <RootStackNav.Screen
+        name="Auth"
+        options={{
+          headerShown: false,
+        }}
+        component={screens.Authorization}
+      />
       <RootStackNav.Screen
         name="Drawer"
         options={{

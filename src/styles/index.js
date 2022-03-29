@@ -10,6 +10,7 @@ export const colors = {
   main: '#be003c',
   backgroundColor: 'rgb(254, 249, 232)',
   white: '#FFFFFF',
+  black: '#000000',
 
   error: {
     default: '#C03A39',
